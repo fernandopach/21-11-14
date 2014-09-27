@@ -1,0 +1,78 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Aplicacion web con MVC basica</h1>
+        <form action="horoscopo.aspx" method="post">
+        <p>Escribe tu nombre</p>
+        <input type="text" name="nombre"/><br>
+        <select name="signo">
+            <option>leo</option>
+            <option>libra</option>
+            <option>sagitario</option>
+            <option>acuario</option>
+            <option>aries</option>
+            <option>tauro</option>
+            <option>piscis</option>
+            <option>geminis</option>
+            <option>virgo</option>
+            <option>escorpion</option>
+            <option>cancer</option>
+            <option>capricornio</option>
+        </select>
+        <input type="submit" value="Apachurrame"/>
+    </form>
+    </body>
+</html>
+
+
+
+/* To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package eagl.bg.sjga.proyecto1.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author T
+ */
+public class ServletBuscarHoroscopo extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+      response.setContentType("text/html");
+       // response.setContentType("Aplication/vnd.ms-excel");
+       PrintWriter out= response.getWriter();
+      String nombre=request.getParameter("nombre");
+      String signo=request.getParameter("signo");
+       out.println("Bienvenido " +nombre+ "a mi servlet escogiste "+signo);
+       
+    }
+}
+        
+        
+        
