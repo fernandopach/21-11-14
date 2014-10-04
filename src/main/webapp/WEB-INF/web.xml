@@ -5,9 +5,25 @@
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
         <servlet-class>eagl.bg.sjga.proyecto1.controller.ServletBuscarHoroscopo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPagarNomina</servlet-name>
+        <servlet-class>com.mycompany.maven.mvc.ServletPagarNomina</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Nomina</servlet-name>
+        <servlet-class>eagl.bg.sjga.proyecto1.controller.Nomina</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
         <url-pattern>/horoscopo.aspx</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPagarNomina</servlet-name>
+        <url-pattern>/nomina</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Nomina</servlet-name>
+        <url-pattern>/Nomina</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
