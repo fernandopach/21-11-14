@@ -25,9 +25,9 @@ public class ServletPagarNomina extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-           Trabajador t=new Trabajador(1, "Sandra", 40,200);
+           Trabajador t=new Trabajador(1, request.getParameter("nombre"), 40,200);
         nomina n=new nomina (t);
-        out.println(   n.pagarNomina());
+        out.println(" hola "+request.getParameter("nombre")+" tu nomina es"+n.pagarNomina());
         
     }
 }
