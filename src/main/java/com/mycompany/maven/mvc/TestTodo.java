@@ -6,8 +6,7 @@
 
 package com.mycompany.maven.mvc;
 
-import com.mycompany.maven.mvc.nomina;
-import com.bmycmavenmvctroller.Trabajador;
+
 
 /**
  *
@@ -16,8 +15,8 @@ import com.bmycmavenmvctroller.Trabajador;
 public class TestTodo {
     public static void main(String args[]){
         //primero creamos un trabajador 
-        Trabajador t=new Trabajador(1, "Sandra", 40,200);
-        nomina n=new nomina (t);
+        Trabajador t=new Trabajador( "Sandra", "garcia","Flores");
+       
         n.pagarNomina();
         
     }
