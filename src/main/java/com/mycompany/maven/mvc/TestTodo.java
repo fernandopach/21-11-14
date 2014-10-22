@@ -6,6 +6,10 @@
 
 package com.mycompany.maven.mvc;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
 
 
 /**
@@ -14,11 +18,20 @@ package com.mycompany.maven.mvc;
  */
 public class TestTodo {
     public static void main(String args[]){
-        //primero creamos un trabajador 
-        Trabajador t=new Trabajador( "Sandra", "garcia","Flores");
-       
-        n.pagarNomina();
-        
+        //paso 1 abrir la sesion-factory
+        SessionFactory factory= HibernateUtilidades.getSessionFactory();
+                  Session sesion= factory.openSession();
+                  
+                  //empezar una transaccion 
+                Transaction tranza=  sesion.beginTransaction();
+               
+           //ahremos un insert
+                Trabajador t=new Trabajador("sandra", "brenda", "garcia");
+                sesion.save(t);
+                //liberamos la transaccion
+                tranza.commit();
+                //cerramos la sesion devolvemos la libertad al borrador
+                sesion.close();
     }
     
 }
