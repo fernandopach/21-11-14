@@ -10,7 +10,26 @@
         <!--cargamos estilo de casacda de twiter booststar para que se vean bonita la aplicacion web-->
         <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/bootstrap.css">
         <script src="js/libs/twitter-bootstrap/js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#guardar-trabajador").click(function(){
+                    $.ajax({
+                        url:'guardar-trabajador',
+                        method:'post',
+            data:{
+                nombre:$("#nombre").val(),
+                paterno:$("#paterno").val(),
+                materno:$("#materno").val(),
+            },
+            success:function(resultado){
+                $("resultado-guardar-trabajador").html(resultado);
+            }
+                    });
+                });
+            });
+        </script>
         <link rel="stylesheet" href="mi-estilo.css">
+        
     </head>
     <body>
         <h1>Proyecto nominas</h1>
@@ -19,6 +38,32 @@
         <input type="text" id="texto-nombre" placeholder="tu nombre">
         <a href="#" id= "ver-nomina" class="btn mi-color" > Ver nomina</a>
         <div id="resultado"></div>
-        
+         <div class="row">
+        <div class="col-lg-3">
+        <label>Nombre</label>
+       
+        </div>
+            <div class="col-lg-3">
+                <input type= "text" class="form-control" id="nombre" />
+            </div>
+         </div>
+         <div class="row">
+        <div class="col-lg-3">
+                <label>A.paterno</label>
+                </div>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" id="paterno"/>
+                 </div>
+         </div>
+        <div class="row">
+        <div class="col-lg-3">
+                <label>A.materno</label>
+                </div>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" id="materno"/>
+                </div>
+         </div>
+                <a id="guardar-trabajador" class="btn btn-default">Guardar Trabajador</a>
+                <div id="resultado-guardar-trabajador"></div>
     </body>
 </html>
