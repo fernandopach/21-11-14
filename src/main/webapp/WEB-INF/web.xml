@@ -17,6 +17,10 @@
         <servlet-name>ServletGuardarUsuario</servlet-name>
         <servlet-class>com.mycompany.maven.mvc.ServletGuardarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletActualizarTrabajador</servlet-name>
+        <servlet-class>com.mycompany.maven.mvc.ServletActualizarTrabajador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
         <url-pattern>/horoscopo.aspx</url-pattern>
@@ -32,6 +36,10 @@
     <servlet-mapping>
         <servlet-name>ServletGuardarUsuario</servlet-name>
         <url-pattern>/Guardar-Trabajador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletActualizarTrabajador</servlet-name>
+        <url-pattern>/actualizar-Trabajador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

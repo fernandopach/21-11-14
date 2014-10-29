@@ -1,20 +1,19 @@
+
+
 $(document).ready(function(){
-//alert('probando jquery');
-$("#ver-nomina").click(function(){
+$("actualizar-trabajador").click(function (){
     $.ajax({
-        url:'nomina',
-        metodo:'get',
+        url:'actualizar-trabajador',
+        metodo:'put',
         data:{
-          nombre:$("#texto-nombre").val(),
-          edad:$("#texto-edad").val()
+          id:'1',
+          nombre:'sandra',
+          paterno:'brenda',
+          materno:'garcia'
         },
-        success:function(no_me_olvides){
-            //alert(no_me_olvides);
-            $("#resultado").html(no_me_olvides);
+        success:function(respuesta){  
+        $("#resultado-actualizacion").html(respuesta);
         },
-        failure:function (error){
-            
-        }
     });
     
 });
