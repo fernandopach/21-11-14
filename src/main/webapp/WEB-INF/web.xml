@@ -21,6 +21,18 @@
         <servlet-name>ServletActualizarTrabajador</servlet-name>
         <servlet-class>com.mycompany.maven.mvc.ServletActualizarTrabajador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletBuscarTodos</servlet-name>
+        <servlet-class>com.mycompany.maven.mvc.ServletBuscarTodos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletBuscarPorId</servlet-name>
+        <servlet-class>com.mycompany.maven.mvc.ServletBuscarPorId</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletBorrar</servlet-name>
+        <servlet-class>com.mycompany.maven.mvc.ServletBorrar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
         <url-pattern>/horoscopo.aspx</url-pattern>
@@ -40,6 +52,18 @@
     <servlet-mapping>
         <servlet-name>ServletActualizarTrabajador</servlet-name>
         <url-pattern>/actualizar-Trabajador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletBuscarTodos</servlet-name>
+        <url-pattern>/ServletBuscarTodos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletBuscarPorId</servlet-name>
+        <url-pattern>/ServletBuscarPorId</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletBorrar</servlet-name>
+        <url-pattern>/ServletBorrar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
