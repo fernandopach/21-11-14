@@ -123,7 +123,9 @@ public class Trabajador implements Serializable {
 
     @Override
     public String toString() {
-        return "com.bmycmavenmvctroller.Trabajador[ idTrabajador=" + idTrabajador + " ]";
+        return "Trabajador{" + "idTrabajador=" + idTrabajador + ", nombre=" + nombre + ", paterno=" + paterno + ", materno=" + materno + '}';
     }
+
+    
     
 }

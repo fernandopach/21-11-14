@@ -9,6 +9,7 @@ package com.mycompany.maven.mvc;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -21,17 +22,16 @@ public class Pruebitamala {
      */
     public static void main(String[] args) {
        //pasos para la transaccion
-       SessionFactory factory= UtilidadesHibernate.getSessionFactory();
+       SessionFactory sesion= UtilidadesHibernate.getSessionFactory();
        //abrir la sesion
-       Session sesion= factory.openSession();
+       Session ses= sesion.openSession();
        //importantisimo empezar la sesion
-       Transaction t= sesion.beginTransaction();
+       Transaction t=ses.beginTransaction();
        //Viene lo bueno,hacer la operacion
-      sesion.save(new Trabajador("brenda","garcia","flores"));
-      //el siguiente renglon libera el candado
-      t.commit();
-      //finalmente cerramos el session factory
-      factory.close();
+            Trabajador uno=(Trabajador) ses.createCriteria(Trabajador.class).add(Restrictions.idEq(1)).uniqueResult();
+          //paso 2   ses.delete(new Trabajador(2,"rata", "de", "dos patas"));
+          t.commit();
+          ses.close();
       
        
     }
