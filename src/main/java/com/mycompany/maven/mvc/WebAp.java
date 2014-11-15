@@ -29,7 +29,7 @@ public class WebAp extends AbstractAnnotationConfigDispatcherServletInitializer 
     @Override
     protected String[] getServletMappings() {
        System.out.println(">>>>>>>>>>> CARGANDO CONFIGURACION DE SERVicios");
-       return new String[]{"/Servicios/*"};
+       return new String[]{"/servicios/*"};
     }
     
 }

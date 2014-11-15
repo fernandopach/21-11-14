@@ -40,6 +40,14 @@
     <artifactId>hibernate-core</artifactId>
     <version>4.3.6.Final</version>
 </dependency>
+ 
+ <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+      <type>jar</type>
+    </dependency>
+    
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
